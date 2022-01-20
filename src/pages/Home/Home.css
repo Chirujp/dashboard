@@ -1,0 +1,42 @@
+.chiruLoginBackground {
+    width: 100vw;
+    height: 100vh;
+    background: url('./../../../public/hero.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px);
+    position: absolute;
+    z-index: -1;
+}
+
+.chiruLoginContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: var(--padding-container);
+}
+
+.chiruLoginBox {
+    background-color: var(--primary-color);
+    width: 35rem;
+    height: calc(100vh - (var(--padding-container) * 2));
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.chiruLoginBoxContent {
+    display: grid;
+    padding: 3rem 0rem 1rem;
+}
+
+.chiruLoginBoxForm {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.chiruLoginBoxFooter {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+}

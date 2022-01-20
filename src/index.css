@@ -1,0 +1,42 @@
+:root {
+  --primary-color: rgb(22, 22, 22);
+  --secondary-color: rgb(17, 212, 238);
+  --padding-container: 5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Al Bayan;
+}
+
+input {
+  padding: 0.6rem;
+  border: 0.1rem solid rgb(95, 95, 95);
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(255, 255, 255);
+  color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 0.1rem solid ;
+}
+
