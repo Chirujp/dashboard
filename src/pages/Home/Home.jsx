@@ -18,7 +18,7 @@ function Home() {
                                     id="chiruAdminUser"
                                     placeholder="Admin user"
                                     required
-                                    autocorrect="off"
+                                    autoCorrect="off"
                                 />
                             </div>
 
@@ -30,8 +30,8 @@ function Home() {
                                     id="chiruPassword"
                                     placeholder="Password"
                                     required
-                                    minlength="8"
-                                    autocomplete="current-password"
+                                    minLength="8"
+                                    autoComplete="current-password"
                                 />
                             </div>
                             
