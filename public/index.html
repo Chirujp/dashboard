@@ -28,6 +28,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="notification"></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,5 +40,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+        const parent = document.getElementById('notification');
+    
+        let inc = 0;
+        
+        function createNotif(text, color) {
+            inc++
+            
+            const notif = document.createElement('div');
+            notif.innerHTML = text;
+            notif.id = `notif-${inc}`;
+            notif._timeout = setTimeout(() => {
+                setTimeout(() => {
+                notif.remove();
+                }, 1000);
+                notif.style.animation = '.2s ease-in slideout';
+                notif.style.opacity = 0;
+            }, 5*1000);
+            notif.style.backgroundColor = color;
+            
+            parent.appendChild(notif);
+        };
+    </script>
   </body>
 </html>

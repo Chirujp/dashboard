@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import Home from './Home';
+import Greeting from './Greeting';
 
 test('renders title link', () => {
-  render(<Home />);
+  render(<Greeting />);
   const titleElement = screen.getByText(/Chiru チル - Dashboard/i);
   expect(titleElement).toBeInTheDocument();
 });

@@ -1,51 +1,21 @@
-import './Home.css';
+import {useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+
+import authentificator from './../../stores/user';
 
 function Home() {
-    return (
-        <div>
-            <div className="chiruLoginBackground" />
-            <div className='chiruLoginContainer'>
-                <div className="chiruLoginBox">
-                    <div className="chiruLoginBoxContent">
-                        <h1>Chiru チル - Dashboard</h1>
+    const navigate = useNavigate();
 
-                        <form className="chiruLoginBoxForm">
-                            <div>
-                                <label htmlFor="chiruAdminUser">Admin user</label>
-                                <input
-                                    type="text"
-                                    name="adminUser"
-                                    id="chiruAdminUser"
-                                    placeholder="Admin user"
-                                    required
-                                    autoCorrect="off"
-                                />
-                            </div>
+    useEffect(() => {
+        const state = authentificator.getState();
 
-                            <div>
-                                <label htmlFor="chiruPassword">Password</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="chiruPassword"
-                                    placeholder="Password"
-                                    required
-                                    minLength="8"
-                                    autoComplete="current-password"
-                                />
-                            </div>
-                            
-                            <input type="submit" value="Sign in" />
-                        </form>
+        if (!state.isAuthenticated) {
+            window.createNotif('Your are not connected', '#FF0000');
+            navigate('/', { replace: true });
+        };
+    });
 
-                        <div className="chiruLoginBoxFooter">
-                            Chiru &copy; 2022 - All rights reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
+    return <></>;
+};
 
 export default Home;
